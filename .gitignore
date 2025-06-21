@@ -1,0 +1,389 @@
+# ================================
+# .gitignore - Local RAG Weekend
+# ================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# PyCharm
+.idea/
+
+# ================================
+# RAG-Specific Ignores
+# ================================
+
+# Data directories (sensitive/large files)
+data/uploads/*
+data/chromadb/*
+data/cache/*
+data/logs/*
+
+# Keep directory structure but ignore contents
+!data/uploads/.gitkeep
+!data/chromadb/.gitkeep
+!data/cache/.gitkeep
+!data/logs/.gitkeep
+
+# Model files and embeddings (too large for git)
+*.bin
+*.safetensors
+*.gguf
+*.ggml
+models/
+embeddings/
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp
+
+# Cache files
+.cache/
+cache/
+__cache__/
+
+# Vector database files
+*.db
+*.sqlite
+*.sqlite3
+chroma.db
+
+# Streamlit cache
+.streamlit/
+
+# ================================
+# Development Tools
+# ================================
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ================================
+# OS Generated Files
+# ================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ================================
+# Docker
+# ================================
+
+# Docker volumes
+docker-compose.override.yml
+.dockerignore
+
+# ================================
+# Logs and Debugging
+# ================================
+
+# Application logs
+*.log
+logs/
+log/
+
+# Debug files
+debug/
+*.debug
+
+# Performance profiling
+*.prof
+*.pstats
+
+# ================================
+# API Keys and Secrets
+# ================================
+
+# Environment files with secrets
+.env.local
+.env.production
+.env.development
+.env.staging
+
+# API keys and tokens
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# Configuration files with sensitive data
+config.json
+secrets.json
+private.json
+
+# ================================
+# Large Files and Datasets
+# ================================
+
+# Large datasets
+datasets/
+*.csv
+*.parquet
+*.pickle
+*.pkl
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Compressed files (unless specifically needed)
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# ================================
+# Benchmark and Test Data
+# ================================
+
+# Test outputs
+test_outputs/
+benchmark_results/
+performance_data/
+
+# Sample documents (add specific ones to git if needed)
+samples/
+test_documents/
+
+# ================================
+# IDE and Editor Specific
+# ================================
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# ================================
+# Documentation Build
+# ================================
+
+# Generated documentation
+docs/_build/
+docs/build/
+site/
+
+# ================================
+# Monitoring and Analytics
+# ================================
+
+# Metrics and monitoring data
+metrics/
+monitoring/
+analytics/
+
+# ================================
+# Future Extensions
+# ================================
+
+# Placeholder for future model formats
+*.onnx
+*.tflite
+*.torchscript
+
+# Placeholder for future database formats
+*.h5
+*.hdf5
+*.arrow
